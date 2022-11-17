@@ -9,6 +9,7 @@ print(df.columns)
 print(df.dtypes)
 print(df.describe)
 print(df.describe(include='all'))
+print(df.isnull().sum())
 # path = './data_analytics/coursera/import_export/data/data.csv'
 
 # df.to_csv(path)
