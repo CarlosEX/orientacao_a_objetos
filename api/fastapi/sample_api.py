@@ -1,11 +1,22 @@
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
+from data_reader import DataCsv
+import pandas as pd
+
 
 app = FastAPI()
 
 @app.get('/')
 def hello():
     return {'Hello World!'}
+
+@app.get("/get-data")
+def get_data():
+
+    data = DataCsv()
+    result = data.get_all(5)
+    return result
+
 
 @app.get("/my-first-api")
 def hello_name(name = None):
