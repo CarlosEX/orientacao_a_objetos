@@ -15,6 +15,7 @@ ys = [[[[1, 3, 2 ,1]]]]
 	
 # plotting the graph
 graph.multi_polygons(xs, ys)
+
 	
 # displaying the model
 show(graph)
